@@ -16,15 +16,13 @@ public class sentencaDancante {
         for (int i = 1; i < fraseC.length; i++) {
             if (Character.isLetter(fraseC[i]) && ultimoEhMaiusculo) {
                 fraseC[i] = Character.toLowerCase(fraseC[i]);
-            } else {
-                
+                ultimoEhMaiusculo = false;
+            } else if (Character.isLetter(fraseC[i]) && !ultimoEhMaiusculo) {
+                fraseC[i] = Character.toUpperCase(fraseC[i]);
+                ultimoEhMaiusculo = true;
             }
         }
 
-        String retorno = "";
-        for (int i = 0; i < fraseC.length; i++) {
-            retorno += fraseC[i];
-        }
-        return retorno;
+        return new String(fraseC);
     }
 }
