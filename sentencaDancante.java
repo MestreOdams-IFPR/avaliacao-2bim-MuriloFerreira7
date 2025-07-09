@@ -11,9 +11,8 @@ public class sentencaDancante {
 
     public static String transformarSentencaDancante(String frase) {
         char[] fraseC = frase.toCharArray();
-        fraseC[0] = Character.toUpperCase(fraseC[0]);
-        boolean ultimoEhMaiusculo = true;
-        for (int i = 1; i < fraseC.length; i++) {
+        boolean ultimoEhMaiusculo = false;
+        for (int i = 0; i < fraseC.length; i++) {
             if (Character.isLetter(fraseC[i]) && ultimoEhMaiusculo) {
                 fraseC[i] = Character.toLowerCase(fraseC[i]);
                 ultimoEhMaiusculo = false;

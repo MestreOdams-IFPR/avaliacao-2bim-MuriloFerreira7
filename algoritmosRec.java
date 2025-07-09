@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class algoritmosRec {
     final static Scanner LER = new Scanner(System.in);
     public static void main(String[] args) {
-        System.out.println(tribonacci(LER.nextInt()));
-        System.out.println(pell(LER.nextInt()));
+        // System.out.println(tribonacci(LER.nextInt()));
+        System.out.println(pell(LER.nextInt()));    
         // int[] nsei = {1, 2, 3, 4, 5, 6, 7, 8};
         // metodoRec02(nsei, 0, 7);
     }
